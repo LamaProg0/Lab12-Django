@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Book - Forms</title>
+</head>
+<body>
+    <h2>Edit Book (Part 2 - Django Forms)</h2>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Book</button>
+    </form>
+    
+    <br>
+    <a href="{% url 'listbooks_part2' %}">Cancel</a>
+</body>
+</html>

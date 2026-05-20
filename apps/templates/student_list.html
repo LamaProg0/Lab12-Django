@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students List</title>
+</head>
+<body>
+    <h2>Students List</h2>
+    <a href="{% url 'add_student' %}">Add New Student</a>
+    <hr>
+    <ul>
+    {% for student in students %}
+        <li>
+            <strong>{{ student.name }}</strong> (Age: {{ student.age }}) - Address: {{ student.address.city }}
+            [ <a href="{% url 'update_student' student.pk %}">Edit</a> ]
+            [ <a href="{% url 'delete_student' student.pk %}">Delete</a> ]
+        </li>
+    {% empty %}
+        <li>No students found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

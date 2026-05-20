@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 9 - Task 6</title>
+</head>
+<body>
+    <h2>Filtered Books Count (Price > 50 & Quantity 1-5)</h2>
+    <table border="1">
+        <tr>
+            <th>Publisher Name</th>
+            <th>Filtered Books Count</th>
+        </tr>
+        {% for pub in publishers %}
+        <tr>
+            <td>{{ pub.name }}</td>
+            <td>{{ pub.filtered_books }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">No data found.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

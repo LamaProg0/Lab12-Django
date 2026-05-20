@@ -1,0 +1,10 @@
+<h2>High Rated Books Count (Rating >= 4)</h2>
+<table border="1">
+    <tr><th>Publisher Name</th><th>High Rated Books Count</th></tr>
+    {% for pub in publishers %}
+    <tr>
+        <td>{{ pub.name }}</td>
+        <td>{{ pub.high_rated_books }}</td>
+    </tr>
+    {% endfor %}
+</table>

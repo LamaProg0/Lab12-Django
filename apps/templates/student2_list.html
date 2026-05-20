@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2: Students List</title>
+</head>
+<body>
+    <h2>Task 2: Students List (Many-to-Many)</h2>
+    <a href="{% url 'add_student2' %}">Add New Student</a>
+    <hr>
+    <ul>
+        {% for student in students %}
+            <li>
+                <strong>{{ student.name }}</strong> (Age: {{ student.age }})
+                <br>Addresses: 
+                {% for addr in student.addresses.all %}
+                    {{ addr.city }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+                <br>
+                [ <a href="{% url 'update_student2' student.pk %}">Edit</a> ]
+                [ <a href="{% url 'delete_student2' student.pk %}" style="color:red">Delete</a> ]
+            </li>
+            <br>
+        {% empty %}
+            <li>No students found.</li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <a href="/books/students/add/">Go to Task 1</a>
+</body>
+</html>

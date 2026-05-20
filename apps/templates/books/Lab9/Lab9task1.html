@@ -1,0 +1,14 @@
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Availability %</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.quantity }}</td>
+        <td>{{ book.availability_pct|stringformat:".2f" }}%</td>
+    </tr>
+    {% endfor %}
+</table>

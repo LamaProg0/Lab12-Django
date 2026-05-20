@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 8 - (The opposite of Task 2)</title>
+</head>
+<body>
+    <h2>Books - Task 3 (The opposite of Task 2)</h2>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} - Edition: {{ book.edition }} - Author: {{ book.author }}</li>
+        {% empty %}
+            <li>No books match this criteria.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

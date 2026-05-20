@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books List - Part 2</title>
+</head>
+<body>
+    <h2>Books List (Part 2 - Django Forms)</h2>
+    
+    <a href="{% url 'addbook_part2' %}">Add New Book (Forms)</a> 
+    <br><br>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Actions</th>
+        </tr>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>
+                <a href="{% url 'editbook_part2' book.id %}">Edit</a> | 
+                <a href="{% url 'deletebook_part2' book.id %}">Delete</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">No books available.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

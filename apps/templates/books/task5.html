@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 8 - Task 5 (Aggregation)</title>
+    <style>
+        .stat-box { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; background: #f9f9f9; }
+        strong { color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <h2>Books Statistics Summary</h2>
+    
+    <div class="stat-box"><strong>Number of Books:</strong> {{ res.total_count }}</div>
+    <div class="stat-box"><strong>Total Price:</strong> {{ res.total_price }} SAR</div>
+    <div class="stat-box"><strong>Average Price:</strong> {{ res.average_price|floatformat:2 }} SAR</div>
+    <div class="stat-box"><strong>Maximum Price:</strong> {{ res.maximum_price }} SAR</div>
+    <div class="stat-box"><strong>Minimum Price:</strong> {{ res.minimum_price }} SAR</div>
+
+    <br>
+    <a href="/books/lab8/task4">Back to Task 4</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2 - contains qu</title>
+</head>
+<body>
+<h2>Books (Edition > 3) and Title/Author contains 'qu'</h2>
+<ul>
+    {% for book in books %}
+        <li>{{ book.title }} - Edition: {{ book.edition }} - Author: {{ book.author }}</li>
+    {% empty %}
+        <li>No books found matching criteria.</li>
+    {% endfor %}
+</ul>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<h2>Member List (Task 3: Images)</h2>
+<a href="{% url 'add_member' %}">Add New Member</a>
+<hr>
+<ul>
+    {% for member in members %}
+        <li>
+            <strong>{{ member.name }}</strong> ({{ member.major }}) <br>
+            {% if member.profile_pic %}
+                <img src="{{ member.profile_pic.url }}" width="100">
+            {% endif %}
+        </li>
+        <br>
+    {% endfor %}
+</ul>
+<hr>
+<a href="{% url 'student2_list' %}">Go back to Task 2</a>

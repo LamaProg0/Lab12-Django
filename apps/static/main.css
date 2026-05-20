@@ -1,0 +1,76 @@
+#link-container {
+    text-align: center; 
+    padding: 20px;
+}
+
+.my-link {
+    display: block;
+    padding: 15px; 
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+#link-green { background-color: #C1FFC1; color: red; }
+#link-grey { background-color: #555555; color: yellow; }
+#link-black { background-color: #000000; color: white; }
+
+
+.my-link:hover { background-color: white; color: black; border: 1px solid black; } 
+.my-link:active { background-color: orange; } 
+
+
+.format-header {
+    background-color: #f0f9f0; 
+    color: #2e7d32;       
+    padding: 10px;
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.formatting-content p {
+    margin: 5px 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.listing-header {
+    background-color: #5f9ea0; 
+    color: white;
+    padding: 10px;
+    margin: 0;
+    font-size: 22px;
+}
+
+.listing-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+ul, ol {
+    line-height: 1.6;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.simple-table th, .simple-table td, 
+.complex-table th, .complex-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.complex-table th {
+    background-color: #ffffff;
+}

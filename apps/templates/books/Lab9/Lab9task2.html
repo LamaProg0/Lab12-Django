@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 9 - Task 2</title>
+</head>
+<body>
+    <h2>Publishers Annotated with Total Book Stock</h2>
+    <table border="1">
+        <tr>
+            <th>Publisher Name</th>
+            <th>Total Stock (Sum of Quantities)</th>
+        </tr>
+        {% for pub in publishers %}
+        <tr>
+            <td>{{ pub.name }}</td>
+            <td>{{ pub.total_stock|default:0 }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">No publishers found.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
